@@ -16,4 +16,9 @@ public class HelloController {
     System.out.println("THe name is : "+ name);
     return "Hellow World";
   }
+
+  @GetMapping("/workout")
+  public String workout() {
+    return "Workout";
+  }
 }
