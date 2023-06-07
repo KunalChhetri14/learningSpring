@@ -1,4 +1,4 @@
-package com.kunal.springBootDependencyInjection.SpringApp.Config;
+package com.kunal.springBootDependencyInjection.SpringApp.config;
 
 import com.kunal.springBootDependencyInjection.SpringApp.model.coach.Coach;
 import com.kunal.springBootDependencyInjection.SpringApp.model.coach.SwimCoach;
