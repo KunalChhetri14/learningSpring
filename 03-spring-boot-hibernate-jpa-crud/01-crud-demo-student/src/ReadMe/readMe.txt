@@ -143,3 +143,19 @@ Primary Key:
         Sop("Saved student id: "+ tempStudent.getId);
       }
     }
+
+    //to read
+    entityManager.find(Student.class, 1) //return details of id 1
+
+    JPA Query Language (JPQL)
+    Query language for retrieving objects
+    Similar in concept to SQL
+      where, like, order by, join, in etc
+    However JPQL is based on entity name and fields
+
+    Retreiving all Students
+    TypedQuery<Student> theQuery = entityManager.createQuery("FROM Student where lastName='Chhetri'", Student.class); //here FROM Student here Student is not databse table instead it is entity name, same goes for lastName
+    List<Student> students = theQuery.getResultList();
+
+
+
