@@ -1,0 +1,50 @@
+Hibernate 
+framework for persiting and saving java objects in a database
+
+Benefits:
+handles low level sql code
+minimizes the amount of jdbc code we have to develop
+Hiberanate provides object to relational mapping
+
+
+How does it work?
+Hiberate provide something called Object-To-Relational Mapping(ORM)
+the developer defines mapping between java class and database table
+
+
+JPA (Jakarta/java persistence api )
+Standard api for Object to relational mapping
+
+
+Only a specification
+Defines a set of interfaces
+
+One of JPA implemenation is Hibernate. Another can be EclipseLink
+
+
+Benefits of JPA
+By using standard api, you are not locked  to vendors implementation
+Maintain protable, flexible code by coding to JPA spec(interfaces)
+Theoretically we can switch vendor implementations
+	Ex: if hibernate stops supporting we can switch to EclipseLink
+
+Saving Java Object:
+//create java object
+Student theStudent = new Student("Kunal", "Chhetri", "kunalchhetri14@gmail.com");
+ 
+//save it to databse
+entityManager.persist(theStudent); //entity Manager is special jpa helper object
+//data will be stored in the database i.e SQL insert
+
+//Retrieve java object with JPA
+int theId=1;
+Student myStudent = entityManager.find(Student.class, theId); //query for id theId i.e 1
+
+fetching whole list
+TypedQuery<Student> allStudentsQuery = entityManger.createQuery("from Student", Student.class);
+List<Student> students = allStudensQuery.getResultList();
+
+
+HIbernate/JPA uses JDBC for database communications
+List<Student> = entitryManger.
+
